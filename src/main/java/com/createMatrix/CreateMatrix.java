@@ -1,4 +1,4 @@
-package com.create;
+package com.createMatrix;
 
 public class CreateMatrix implements Matrix{
     @Override

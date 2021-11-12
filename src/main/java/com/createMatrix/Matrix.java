@@ -1,4 +1,4 @@
-package com.create;
+package com.createMatrix;
 
 public interface Matrix {
     public int[][] createMatrix(int vertex, int edges);

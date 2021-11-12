@@ -1,7 +1,7 @@
 package com.main;
 
-import com.create.CreateMatrix;
-import com.create.Matrix;
+import com.createMatrix.CreateMatrix;
+import com.createMatrix.Matrix;
 
 public class Main {
     public static void main(String[] args) {
