@@ -22,4 +22,17 @@ public class CreateMatrix implements Matrix{
 
         }
     }
+
+    @Override
+    public void inputValuesToMatrix(int[][] matrix, int v, int e) {
+        int eLength = matrix.length;
+        System.out.println("e: " + e );
+        int vLength = matrix[0].length;
+        System.out.println("v: " + v );
+        if (vLength >= v && eLength >= e) {
+            matrix[v][e] = 1;
+        } else {
+            System.out.println("chosen numbers are out of matrix scope");
+        }
+    }
 }
