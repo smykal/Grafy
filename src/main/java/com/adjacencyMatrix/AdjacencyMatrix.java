@@ -35,4 +35,14 @@ public class AdjacencyMatrix implements AdjacencyMatrixFunctions {
         }
     }
 
+    @Override
+    public int rowSummary(int[][] matrix, int vertex) {
+        int result = 0;
+        for (int i = 0; i < matrix[vertex].length; i++) {
+            result = result + matrix[vertex][i];
+        }
+        System.out.println("summary for vertex " + vertex + ": " + result);
+        return 0;
+    }
+
 }
