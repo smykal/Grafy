@@ -1,13 +1,15 @@
 package com.main;
 
+import com.adjacencyMatrix.AdjacencyMatrix;
+import com.adjacencyMatrix.AdjacencyMatrixFunctions;
 import com.createMatrix.CreateMatrix;
 import com.createMatrix.Matrix;
 
 public class Main {
     public static void main(String[] args) {
-        Matrix matrix = new CreateMatrix();
-        int[][] table = matrix.createMatrix(5, 7);
-        matrix.inputValuesToMatrix(table, 2,4);
-        matrix.printMatrix(table);
+        AdjacencyMatrixFunctions adjacencyMatrix = new AdjacencyMatrix();
+        int[][] matrix = adjacencyMatrix.createMatrix(6);
+        adjacencyMatrix.addEdge(matrix, 2,5);
+        adjacencyMatrix.printMatrix(matrix);
     }
 }
