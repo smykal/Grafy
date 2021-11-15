@@ -4,19 +4,20 @@ import com.adjacencyMatrix.AdjacencyMatrix;
 import com.adjacencyMatrix.AdjacencyMatrixFunctions;
 import com.createMatrix.CreateMatrix;
 import com.createMatrix.Matrix;
+import com.search.binary.BinarySearch;
+import com.search.binary.BinarySearchWithaAnna;
+import com.search.binary.Searching;
 
 public class Main {
     public static void main(String[] args) {
-        AdjacencyMatrixFunctions adjacencyMatrix = new AdjacencyMatrix();
-        int[][] matrix = adjacencyMatrix.createMatrix(6);
-        adjacencyMatrix.addEdge(matrix, 2,5);
-        adjacencyMatrix.addEdge(matrix, 2,3);
-        adjacencyMatrix.printMatrix(matrix);
-        adjacencyMatrix.rowSummary(matrix, 0);
-        adjacencyMatrix.rowSummary(matrix, 1);
-        adjacencyMatrix.rowSummary(matrix, 2);
-        adjacencyMatrix.rowSummary(matrix, 3);
-        adjacencyMatrix.rowSummary(matrix, 4);
-        adjacencyMatrix.rowSummary(matrix, 5);
+
+        int[] table = {1,2,3,5,6,8,9};
+        Searching searching = new BinarySearch();
+        System.out.println(searching.search(table,6));
+        System.out.println(searching.search(table,4));
+
+        Searching searching2 = new BinarySearchWithaAnna();
+        System.out.println(searching2.search(table,4));
+
     }
 }
