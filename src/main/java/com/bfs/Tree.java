@@ -1,7 +1,6 @@
 package com.bfs;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Tree<T> {
     private T value;
@@ -21,4 +20,14 @@ public class Tree<T> {
         children.add(newChild);
         return newChild;
     }
+
+    public static <T> void search(T value, Tree<T> root) {
+        Queue<Tree<T>> queue = new ArrayDeque<>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            Tree<T> currentNode = queue.remove();
+        }
+
+    }
+
 }
