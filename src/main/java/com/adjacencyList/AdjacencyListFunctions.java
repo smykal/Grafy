@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public interface AdjacencyListFunctions {
+
     public ArrayList<LinkedList<Node>> adjacencyList(int numberOfNodes);
-    void addEdge(LinkedList<Node> adjacencyList, Node originNode, Node endNode);
-    void printMatrix(LinkedList<Node> adjacencyList);
-    int rowSummary(LinkedList<Node> adjacencyList, Node node);
+    void addEdge(ArrayList<LinkedList<Node>> adjacencyList, Node originNode, Node endNode);
+    void printMatrix(ArrayList<LinkedList<Node>> adjacencyList);
+    int rowSummary(ArrayList<LinkedList<Node>> adjacencyList, Node node);
 }

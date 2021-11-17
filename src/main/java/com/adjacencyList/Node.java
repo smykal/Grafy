@@ -1,11 +1,11 @@
 package com.adjacencyList;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.AllArgsConstructor;
+import lombok.ToString;
 
 @Getter
-@Setter
 @AllArgsConstructor
+@ToString
 public class Node {
     char data;
     int nodeNumber;
