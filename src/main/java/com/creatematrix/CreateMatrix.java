@@ -1,4 +1,4 @@
-package com.createMatrix;
+package com.creatematrix;
 
 public class CreateMatrix implements Matrix{
     @Override
@@ -30,7 +30,7 @@ public class CreateMatrix implements Matrix{
     }
 
     @Override
-    public void inputValuesToMatrix(int[][] matrix, int v, int e) {
+    public void insertValuesToMatrix(int[][] matrix, int v, int e) {
         int eLength = matrix.length;
         System.out.println("e: " + e );
         int vLength = matrix[0].length;
