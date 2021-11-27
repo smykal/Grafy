@@ -19,12 +19,28 @@ import java.util.Queue;
         // VisitNode(u)
 
 public class Dfs {
-    public void dfs(int[][] graph, int startingNode) {
+
+    public void visitNode(int[][] matrix, int vertex) {
+        List<Integer> visitedNotes = new ArrayList<>();
+        visitedNotes.add(vertex);
+
+        for (int i = 0; i < matrix[vertex].length; i++) {
+            if (matrix[vertex][i] != 0 && !visitedNotes.contains(matrix[vertex][i]) ) {
+                visitNode(matrix,i);
+            }
+        }
     }
     
-    public void visitNode(int startingNode) {
-        List<Integer> visitedNodes = new ArrayList();
-        visitedNodes.add(startingNode);
-
+    void depthFirstSearch(int[][] matrix) {
+        List<Integer> visitedNodes = new ArrayList<>();
+        for (int i = 0; i < matrix.length; i++) {
+            visitedNodes.add(i);
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            if (visitedNodes.contains(i)) {
+                visitNode(matrix,i);
+                visitedNodes.remove(i);
+            }
+        }
     }
 }
