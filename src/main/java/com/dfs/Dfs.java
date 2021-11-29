@@ -2,8 +2,6 @@ package com.dfs;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
         // function VisitNode(u):
         // oznacz u jako odwiedzony
@@ -19,27 +17,18 @@ import java.util.Queue;
         // VisitNode(u)
 
 public class Dfs {
-
-    public void visitNode(int[][] matrix, int vertex) {
-        List<Integer> visitedNotes = new ArrayList<>();
-        visitedNotes.add(vertex);
-
-        for (int i = 0; i < matrix[vertex].length; i++) {
-            if (matrix[vertex][i] != 0 && !visitedNotes.contains(matrix[vertex][i]) ) {
-                visitNode(matrix,i);
-            }
-        }
-    }
     
-    void depthFirstSearch(int[][] matrix) {
-        List<Integer> visitedNodes = new ArrayList<>();
+    public void depthFirstSearch(int[][] matrix, int startingVertex) {
+        depthDeeperFirstSearch(matrix, startingVertex, new ArrayList<>());
+    }
+
+    private void depthDeeperFirstSearch(int[][] matrix, int startingVertex, List<Integer> visitedNodes) {
+        visitedNodes.add(startingVertex);
+        System.out.println(startingVertex + " -> ");
+
         for (int i = 0; i < matrix.length; i++) {
-            visitedNodes.add(i);
-        }
-        for (int i = 0; i < matrix.length; i++) {
-            if (visitedNodes.contains(i)) {
-                visitNode(matrix,i);
-                visitedNodes.remove(i);
+            if (!visitedNodes.contains(i) && matrix[startingVertex][i] == 1) {
+                depthDeeperFirstSearch(matrix, i, visitedNodes);
             }
         }
     }

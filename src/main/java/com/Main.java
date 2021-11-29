@@ -3,6 +3,7 @@ package com;
 import com.bfs.Bfs;
 import com.creatematrix.CreateMatrix;
 import com.creatematrix.Matrix;
+import com.dfs.Dfs;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class Main {
         System.out.println();
         System.out.println();
 
-        Bfs bfs = new Bfs();
-        bfs.bfs(matrix1,0);
+        Dfs dfs = new Dfs();
+        dfs.depthFirstSearch(matrix1,0);
     }
 }
