@@ -21,6 +21,7 @@ public class Main {
         matrix.insertValuesToMatrix(matrix1,4,1);
         matrix.insertValuesToMatrix(matrix1,5,2);
         matrix.insertValuesToMatrix(matrix1,6,2);
+        
 
         matrix.printMatrix(matrix1);
         System.out.println();
